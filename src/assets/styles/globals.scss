@@ -1,0 +1,116 @@
+// Imports
+@import 'vars';
+
+
+// Generals
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $primary-font;
+}
+
+body {
+    background-color: $body-bg;
+}
+
+.App {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    height: 100vh;
+    max-height: 100vh;
+
+    &__container {
+        margin: 0 auto;
+        padding: 4rem 5rem;
+        width: 45%;
+        height: 65vh;
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgba($black, 0.3);
+        background-position-x: 50%;
+        background-position-y: 14rem;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-color: $white;
+        background-image: url('../img/bicycle.png');
+
+        &__header {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 2rem;
+
+            div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 1rem;
+
+                img {
+                    padding: .5rem;
+                    width: 3rem;
+                    height: 3rem;
+                    border: 1px solid $gray;
+                    border-radius: 50%;
+                }
+            }
+
+            p {
+                color: $light-gray;
+
+                span {
+                    font-weight: 700;
+                }
+            }
+        }
+
+        &__main {
+
+            &__list {
+                display: flex;
+                flex-direction: column;
+                list-style: none;
+
+                li {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 2.5rem;
+                    color: $gray;
+                    font-size: 1.2rem;
+                    font-weight: 500;
+
+                    span {
+                        color: $black;
+                        font-size: 1.6rem;
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            &__total {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: $gray;
+                font-size: 1.2rem;
+                font-weight: 500;
+
+                p {
+                    text-transform: uppercase;
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                }
+
+                span {
+                    color: $black;
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
